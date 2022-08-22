@@ -62,6 +62,7 @@ function Register() {
     }),
     onSubmit: (values) => {
       values.passwordConfirmation = delete dispatch(signupUser(values))
+      values = null
     },
   })
   useEffect(() => {
