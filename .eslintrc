@@ -1,21 +1,21 @@
-//{
-//  "plugins": [
-//    "react-redux"
-//  ],
-//  "extends": [
-//    "plugin:react-redux/recommended",
-//    "@imaginary-cloud/react"
-//  ],
-//  "rules": {
-//    "import/no-unresolved": "off",
-//    "no-param-reassign": "off",
-//    "react-redux/connect-prefer-named-arguments": 2,
-//    " react/function-component-definition": "off",
-//    "jsx-a11y/anchor-is-valid ": "off",
-//    "react/prop-types" : "off",
-//    "prefer-destructuring": ["error", {"object": true, "array": false}],
-//    "no-console": "off",
-//    "react/no-unescaped-entities": ["error", {"forbid": [">", "}"]}],
-//     "no-shadow": "off"
-//  }
-//}
+{
+  "plugins": [
+    "react-redux"
+  ],
+  "extends": [
+    "plugin:react-redux/recommended",
+    "@imaginary-cloud/react"
+  ],
+  "rules": {
+    "import/no-unresolved": "off",
+    "no-param-reassign": "off",
+    "react-redux/connect-prefer-named-arguments": 2,
+    " react/function-component-definition": "off",
+    "jsx-a11y/anchor-is-valid ": "off",
+    "react/prop-types" : "off",
+    "prefer-destructuring": ["error", {"object": true, "array": false}],
+    "no-console": "off",
+    "react/no-unescaped-entities": ["error", {"forbid": [">", "}"]}],
+     "no-shadow": "off"
+  }
+}
