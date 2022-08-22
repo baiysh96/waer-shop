@@ -14,7 +14,7 @@ const favoriteSlice = createSlice({
       state.favorite.forEach((product) => {
         if (product.id === action.payload.id) {
           included = true
-          product.amount = product.amount + 1
+          product.amount += 1
         }
       })
       if (!included) {

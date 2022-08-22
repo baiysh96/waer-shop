@@ -15,7 +15,7 @@ const cartSlice = createSlice({
       state.cart.forEach((product) => {
         if (product.id === action.payload.id) {
           included = true
-          product.amount = product.amount + 1
+          product.amount += 1
         }
       })
       if (!included) {
@@ -27,24 +27,24 @@ const cartSlice = createSlice({
     },
     increment: (state, action) => {
       const item = state.cart.find((item) => item.id === action.payload)
-      item.amount = item.amount + 1
-      state.totalAmount = state.totalAmount + 1
+      item.amount += 1
+      state.totalAmount += 1
       localStorage.setItem('amount', state.totalAmount)
     },
     decrement: (state, action) => {
       const item = state.cart.find((item) => item.id === action.payload)
       if (item.amount > 1) {
-        item.amount = item.amount + 1
+        item.amount += 1
       } else {
         state.cart = state.cart.filter((item) => item.id !== action.payload)
       }
-      state.totalAmount = state.totalAmount - 1
+      state.totalAmount -= 1
       localStorage.setItem('amount', state.totalAmount)
     },
     removeFromCart: (state, action) => {
       const item = state.cart.find((item) => item.id === action.payload)
       state.cart = state.cart.filter((item) => item.id !== action.payload)
-      state.totalAmount = state.totalAmount - item.amount
+      state.totalAmount -= item.amount
       localStorage.setItem('cart', JSON.stringify([...state.cart]))
       localStorage.setItem('amount', state.totalAmount)
     },
